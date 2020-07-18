@@ -52,7 +52,7 @@ class _NewsListState extends State<NewsList> {
                 },
                 separatorBuilder: (BuildContext context, index) => Divider(),
                 itemCount:
-                    (snapshot.data.length == null) ? 0 : snapshot.data.length);
+                    (snapshot.hasData) ? snapshot.data.length : 0);
           },
         ),
       ),
